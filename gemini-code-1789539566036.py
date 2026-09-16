@@ -5,7 +5,7 @@ st.set_page_config(
     page_title="학교 문제 상황의 현상과 진단 - 구조도", layout="wide"
 )
 
-# 전체 배경 및 스타일 설정 (제목 세로 중앙 정렬 클래스 포함)
+# 전체 배경 및 스타일 설정 (컬럼 세로 중앙 정렬을 위한 flex 스타일 추가)
 st.markdown(
     """
     <style>
@@ -23,11 +23,11 @@ st.markdown(
         border-bottom: 2px solid #CBD5E1;
         padding-bottom: 10px;
     }
-    .vertical-center {
+    /* Streamlit 컬럼 내부를 세로 중앙 정렬하기 위한 클래스 */
+    [data-testid="column"] {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        height: 100%;
     }
     </style>
     """,
@@ -42,7 +42,7 @@ st.markdown(
 
 
 # ==========================================
-# 1. 형식적인 교육활동 (중앙 정렬 및 설명 추가)
+# 1. 형식적인 교육활동 (중앙 정렬 완벽 적용)
 # ==========================================
 with st.container():
   st.markdown(
@@ -57,15 +57,11 @@ with st.container():
   )
 
   with col1:
-    st.markdown(
-        '<div class="vertical-center"><h3>1. 형식적인 교육활동</h3></div>',
-        unsafe_allow_html=True,
-    )
+    st.markdown("<h3>1. 형식적인 교육활동</h3>", unsafe_allow_html=True)
 
   with arrow1:
     st.markdown(
-        "<h2 style='text-align: center; color: #718096; margin-top:"
-        " 40px;'>➔</h2>",
+        "<h2 style='text-align: center; color: #718096; margin: 0;'>➔</h2>",
         unsafe_allow_html=True,
     )
 
@@ -90,21 +86,16 @@ with st.container():
 
   with arrow2:
     st.markdown(
-        "<h2 style='text-align: center; color: #718096; margin-top:"
-        " 40px;'>➔</h2>",
+        "<h2 style='text-align: center; color: #718096; margin: 0;'>➔</h2>",
         unsafe_allow_html=True,
     )
 
   with col3:
-    st.markdown(
-        '<div class="vertical-center"><h3>반쯤 죽은 노동</h3></div>',
-        unsafe_allow_html=True,
-    )
+    st.markdown("<h3>반쯤 죽은 노동</h3>", unsafe_allow_html=True)
 
   with arrow3:
     st.markdown(
-        "<h2 style='text-align: center; color: #718096; margin-top:"
-        " 40px;'>➔</h2>",
+        "<h2 style='text-align: center; color: #718096; margin: 0;'>➔</h2>",
         unsafe_allow_html=True,
     )
 
@@ -146,17 +137,16 @@ with st.container():
   col1, col_arrow, col2 = st.columns([1.2, 0.2, 2.8])
 
   with col1:
+    st.markdown("<h3>2. 교사의 피로와 무력감</h3>", unsafe_allow_html=True)
     st.markdown(
-        '<div class="vertical-center"><h3>2. 교사의 피로와 무력감</h3><p'
-        ' style="font-size:14px; margin:0;">관계와 맥락은 없고 일만 남은 소모적 전쟁'
-        ' 상태</p></div>',
+        "<p style='font-size:14px; margin:0;'>관계와 맥락은 없고 일만 남은 소모적"
+        " 전쟁 상태</p>",
         unsafe_allow_html=True,
     )
 
   with col_arrow:
     st.markdown(
-        "<h2 style='text-align: center; color: #718096; margin-top:"
-        " 20px;'>➔</h2>",
+        "<h2 style='text-align: center; color: #718096; margin: 0;'>➔</h2>",
         unsafe_allow_html=True,
     )
 
@@ -203,16 +193,15 @@ with st.container():
   col1, col_arrow, col2 = st.columns([1.2, 0.2, 2.8])
 
   with col1:
+    st.markdown("<h3>3. 규범의 공백</h3>", unsafe_allow_html=True)
     st.markdown(
-        '<div class="vertical-center"><h3>3. 규범의 공백</h3><p'
-        ' style="font-size:14px; margin:0;">금지와 제한이 사라진 공백</p></div>',
+        "<p style='font-size:14px; margin:0;'>금지와 제한이 사라진 공백</p>",
         unsafe_allow_html=True,
     )
 
   with col_arrow:
     st.markdown(
-        "<h2 style='text-align: center; color: #718096; margin-top:"
-        " 10px;'>➔</h2>",
+        "<h2 style='text-align: center; color: #718096; margin: 0;'>➔</h2>",
         unsafe_allow_html=True,
     )
 
