@@ -141,13 +141,14 @@ with st.container():
   with col2:
     sub1, sub2 = st.columns(2)
     with sub1:
-      st.markdown("**원인: 구조적 한계**")
-      st.markdown("- 필요한 교육이 실제성 있게 이루어져 있지 않아 필연적 발생")
+      st.markdown("**원인 진단**")
+      st.markdown("- **구조적 한계:** 개인화·전능화·탈정치화의 악순환")
       st.markdown(
-          "- 개인화·전능화·탈정치화로 교사 개인의 과제로 전가됨"
+          "- 필요한 교육이 실제성 있게 이루어지지 못해 발생하는 문제에 대한"
+          " 대응이 교사 개인에게 전가"
       )
       st.markdown(
-          "- *but, 개별 교사 차원에서 대응 불가능한 문제가 대부분*"
+          "- 실제로는 개별 교사 단위에서 대응 불가능한 문제가 대부분임"
       )
     with sub2:
       st.markdown("**접근 및 대응**")
