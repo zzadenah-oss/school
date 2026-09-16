@@ -5,7 +5,7 @@ st.set_page_config(
     page_title="학교 문제 상황의 현상과 진단 - 구조도", layout="wide"
 )
 
-# 전체 배경 및 스타일 설정 (컬럼 세로 중앙 정렬을 위한 flex 스타일 추가)
+# 전체 배경 및 완벽한 세로/가로 중앙 정렬 스타일 설정
 st.markdown(
     """
     <style>
@@ -23,11 +23,19 @@ st.markdown(
         border-bottom: 2px solid #CBD5E1;
         padding-bottom: 10px;
     }
-    /* Streamlit 컬럼 내부를 세로 중앙 정렬하기 위한 클래스 */
+    /* 모든 Streamlit 컬럼 내 요소를 가로·세로 완벽 중앙 정렬 */
     [data-testid="column"] {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: stretch;
+    }
+    /* 화살표 전용 컬럼은 가로/세로 모두 절대적인 정중앙 배치 */
+    .arrow-col {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
     }
     </style>
     """,
@@ -42,7 +50,7 @@ st.markdown(
 
 
 # ==========================================
-# 1. 형식적인 교육활동 (중앙 정렬 완벽 적용)
+# 1. 형식적인 교육활동 (화살표 및 제목 완벽 중앙 정렬)
 # ==========================================
 with st.container():
   st.markdown(
@@ -61,7 +69,8 @@ with st.container():
 
   with arrow1:
     st.markdown(
-        "<h2 style='text-align: center; color: #718096; margin: 0;'>➔</h2>",
+        '<div class="arrow-col"><h2 style="color: #718096; margin:'
+        ' 0;">➔</h2></div>',
         unsafe_allow_html=True,
     )
 
@@ -86,7 +95,8 @@ with st.container():
 
   with arrow2:
     st.markdown(
-        "<h2 style='text-align: center; color: #718096; margin: 0;'>➔</h2>",
+        '<div class="arrow-col"><h2 style="color: #718096; margin:'
+        ' 0;">➔</h2></div>',
         unsafe_allow_html=True,
     )
 
@@ -95,7 +105,8 @@ with st.container():
 
   with arrow3:
     st.markdown(
-        "<h2 style='text-align: center; color: #718096; margin: 0;'>➔</h2>",
+        '<div class="arrow-col"><h2 style="color: #718096; margin:'
+        ' 0;">➔</h2></div>',
         unsafe_allow_html=True,
     )
 
@@ -146,7 +157,8 @@ with st.container():
 
   with col_arrow:
     st.markdown(
-        "<h2 style='text-align: center; color: #718096; margin: 0;'>➔</h2>",
+        '<div class="arrow-col"><h2 style="color: #718096; margin:'
+        ' 0;">➔</h2></div>',
         unsafe_allow_html=True,
     )
 
@@ -201,7 +213,8 @@ with st.container():
 
   with col_arrow:
     st.markdown(
-        "<h2 style='text-align: center; color: #718096; margin: 0;'>➔</h2>",
+        '<div class="arrow-col"><h2 style="color: #718096; margin:'
+        ' 0;">➔</h2></div>',
         unsafe_allow_html=True,
     )
 
