@@ -23,19 +23,16 @@ st.markdown(
         border-bottom: 2px solid #CBD5E1;
         padding-bottom: 10px;
     }
-    /* 모든 Streamlit 컬럼 내 요소를 가로·세로 완벽 중앙 정렬 */
-    [data-testid="column"] {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: stretch;
+    /* Streamlit의 가로 블록(컬럼들) 전체를 세로·가로 정중앙(center)으로 정렬 */
+    [data-testid="stHorizontalBlock"] {
+        align-items: center !important;
     }
-    /* 화살표 전용 컬럼은 가로/세로 모두 절대적인 정중앙 배치 */
-    .arrow-col {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
+    /* 화살표 스타일 및 정중앙 배치 */
+    .arrow-text {
+        text-align: center;
+        font-size: 24px;
+        color: #718096;
+        font-weight: bold;
     }
     </style>
     """,
@@ -50,7 +47,7 @@ st.markdown(
 
 
 # ==========================================
-# 1. 형식적인 교육활동 (화살표 및 제목 완벽 중앙 정렬)
+# 1. 형식적인 교육활동 (상하좌우 완벽 중앙 정렬 적용)
 # ==========================================
 with st.container():
   st.markdown(
@@ -68,11 +65,7 @@ with st.container():
     st.markdown("<h3>1. 형식적인 교육활동</h3>", unsafe_allow_html=True)
 
   with arrow1:
-    st.markdown(
-        '<div class="arrow-col"><h2 style="color: #718096; margin:'
-        ' 0;">➔</h2></div>',
-        unsafe_allow_html=True,
-    )
+    st.markdown('<div class="arrow-text">➔</div>', unsafe_allow_html=True)
 
   with col2:
     st.markdown("**생기부 때문에 하는 것(들)**")
@@ -94,21 +87,13 @@ with st.container():
     st.markdown("- 각종 예방교육, 사회정서교육, 민주시민교육 등")
 
   with arrow2:
-    st.markdown(
-        '<div class="arrow-col"><h2 style="color: #718096; margin:'
-        ' 0;">➔</h2></div>',
-        unsafe_allow_html=True,
-    )
+    st.markdown('<div class="arrow-text">➔</div>', unsafe_allow_html=True)
 
   with col3:
     st.markdown("<h3>반쯤 죽은 노동</h3>", unsafe_allow_html=True)
 
   with arrow3:
-    st.markdown(
-        '<div class="arrow-col"><h2 style="color: #718096; margin:'
-        ' 0;">➔</h2></div>',
-        unsafe_allow_html=True,
-    )
+    st.markdown('<div class="arrow-text">➔</div>', unsafe_allow_html=True)
 
   with col4:
     st.markdown(
@@ -156,11 +141,7 @@ with st.container():
     )
 
   with col_arrow:
-    st.markdown(
-        '<div class="arrow-col"><h2 style="color: #718096; margin:'
-        ' 0;">➔</h2></div>',
-        unsafe_allow_html=True,
-    )
+    st.markdown('<div class="arrow-text">➔</div>', unsafe_allow_html=True)
 
   with col2:
     sub1, sub2 = st.columns(2)
@@ -212,11 +193,7 @@ with st.container():
     )
 
   with col_arrow:
-    st.markdown(
-        '<div class="arrow-col"><h2 style="color: #718096; margin:'
-        ' 0;">➔</h2></div>',
-        unsafe_allow_html=True,
-    )
+    st.markdown('<div class="arrow-text">➔</div>', unsafe_allow_html=True)
 
   with col2:
     st.markdown("**공적 대화와 동료관계 형성**")
