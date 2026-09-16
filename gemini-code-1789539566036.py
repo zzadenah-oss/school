@@ -47,7 +47,7 @@ st.markdown(
 
 
 # ==========================================
-# 1. 형식적인 교육활동 (상하좌우 완벽 중앙 정렬 적용)
+# 1. 형식적인 교육활동
 # ==========================================
 with st.container():
   st.markdown(
@@ -120,7 +120,7 @@ with st.container():
 
 
 # ==========================================
-# 2. 교사의 피로와 무력감
+# 2. 교사의 피로와 무력감 (요청사항 반영)
 # ==========================================
 with st.container():
   st.markdown(
@@ -134,11 +134,6 @@ with st.container():
 
   with col1:
     st.markdown("<h3>2. 교사의 피로와 무력감</h3>", unsafe_allow_html=True)
-    st.markdown(
-        "<p style='font-size:14px; margin:0;'>관계와 맥락은 없고 일만 남은 소모적"
-        " 전쟁 상태</p>",
-        unsafe_allow_html=True,
-    )
 
   with col_arrow:
     st.markdown('<div class="arrow-text">➔</div>', unsafe_allow_html=True)
@@ -146,7 +141,7 @@ with st.container():
   with col2:
     sub1, sub2 = st.columns(2)
     with sub1:
-      st.markdown("**원인: <구조적 한계>**")
+      st.markdown("**원인: 구조적 한계**")
       st.markdown("- 필요한 교육이 실제성 있게 이루어져 있지 않아 필연적 발생")
       st.markdown(
           "- 개인화·전능화·탈정치화로 교사 개인의 과제로 전가됨"
@@ -156,16 +151,14 @@ with st.container():
       )
     with sub2:
       st.markdown("**접근 및 대응**")
+      st.markdown("- **전제:** 개별 교사 차원의 문제를 개인 책임감에 의존하지 않음")
       st.markdown(
-          "- **<전제>:** 개별 교사 차원의 문제를 개인 책임감에 의존하지 않음"
-      )
-      st.markdown(
-          "- **<대응 ①>:** 시간표 내 일상적/정기적/안정적 대화 구조 확립\n"
+          "- **대응 ①:** 시간표 내 일상적/정기적/안정적 대화 구조 확립\n"
           "  - *\"업무보다 수업, 수업보다 대화\"* (실무자 위주, 외롭지 않도록"
           " 부담 덜기)"
       )
       st.markdown(
-          "- **<대응 ②>:** 교사가 교육활동 기획의 주체로 (자치, 실행자 결정권"
+          "- **대응 ②:** 교사가 교육활동 기획의 주체로 (자치, 실행자 결정권"
           " 최대화)"
       )
 
